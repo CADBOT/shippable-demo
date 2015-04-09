@@ -1,0 +1,6 @@
+language: ruby
+
+before_install:
+  bundle install
+
+

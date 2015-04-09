@@ -1,0 +1,41 @@
+Hello! My name is {Person.name} from Shippable! Today, I'm going to go over how
+easy it is to get up and going with Shippable. Before I go into  that though
+let me share with you some of benefits for going with a hosted CI solution.
+
+When estimating the cost of running a traditional CI solution such as Jenkins,
+people only consider the upfront effort and cost involved with the setup.
+However, the bigger issue is the sustained time and effort required to keep
+your jenkins machine running and up to date.
+
+Given an app that that is stored in a Shippable repo, there are only two
+steps in getting Shippable builds up and running: enabling the repo on Shippable
+and constructing a shippable.yml file for the build. First let's enable the repo
+{Log in to github and enable the repo}
+
+Now let's create a simple shippable.yml file for our build. The shippable.yml
+syntax consists of a small set of tags that instruct your minion how to execute
+your build, and optionally what to do after it finishes the build. There are 
+different tags and sections for various phases of the build such as installing
+dependencies, running unit tests, and deploying code. For many of these sections
+Shippable has resonable default settings that it can determine based on the
+language. Let's create a shippable yml file for our {Person.favorite_stack}.
+
+In the before_install section, we can install our apps depencies. {Show how this
+could be manually set for thie app type
+
+In the script section, we can specify what we want to happen after our app has
+been built. For example, we can trigger tests for our app with the {Language 
+specific command}
+
+Finally, we can deploy to a service such as heroku in the after_success section
+with a few simply lines. 
+
+Now that we have our shippable.yml file, lets commit it and push it to github!
+{commit and push to github}
+
+Shippable will take the wheel from here! However, you can also log onto our
+web console and watch the builds progress, or diagnose where it went wrong
+if there were any errors. Let's do that now {Log into the console}.
+
+You'll see here in the simulated terminal, there is a section we can expand
+for each tag we set before...
